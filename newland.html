@@ -1,53 +1,129 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <title>EasyEcom</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-<body>
+  <head>
+    <title>EasyEcom — Newland HHT Configuration</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-<div class="container">
-  <h4><b>Newland HHT</b></h4>
-  <p>Newland HHT Integration Tutorial</p>
-  <div class="embed-responsive embed-responsive-4by3">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/IB9S2lC0Bio" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-  <br>
-  <h5><b>Step 1</b></h5>
-  <b>For newer device</b>
-  <h5><b>Step 1.1</b></h5>
-  <p>Search for <b>Quick Settings app</b></p>
-  <h5><b>Step 1.2</b></h5>
-  <p>Open the app and select <b>Scan</b></p>
+    <style>
+      body {
+        padding-top: 20px;
+      }
+      .step-title {
+        margin-top: 25px;
+      }
+      .step-img {
+        max-width: 50%;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 4px;
+      }
+      .section-card {
+        background: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 25px;
+        border: 1px solid #eee;
+      }
+    </style>
+  </head>
 
-  <b>For older device</b>
-  <h5><b>Step 1.1</b></h5>
-  <p>Open <b>Settings</b> select <b>Extended Settings</b> </p>
-  <img src="./images/newland-1.png" class="img-fluid" style="max-width:50%;" alt="Responsive image">
-  <h5><b>Step 1.2</b></h5>
-  <p>Inside <b>Settings > Extended Settings </b> select <b>Scan Settings</b> </p>
-  <img src="./images/newland-2.png" class="img-fluid" style="max-width:50%;" alt="Responsive image">
-  <h5><b>Step 1.3</b></h5>
-  <p>Inside <b>Settings > Extended Settings > Scan Settings</b> </p>
+  <body>
+    <div class="container">
+      <h2><b>Newland HHT Integration Tutorial</b></h2>
+      <p class="text-muted">EasyEcom Device Configuration Guide</p>
 
-  <h5><b>Step 2</b></h5>
-  <p><b>Enable scan</b> </p>
-  <img src="./images/newland-3.png" class="img-fluid" style="max-width:50%;" alt="Responsive image">
-  <h5><b>Step 2.1</b></h5>
-  <p>Change <b>Output Mode </b> to <b>Output Mode </b>Output via API</p>
-  <img src="./images/newland-4.png" class="img-fluid" style="max-width:50%;" alt="Responsive image">
+      <!-- Quick Navigation -->
+      <div class="alert alert-info">
+        <b>Quick Navigation:</b><br />
+        <a href="#video">▶ Watch Tutorial Video</a><br />
+        <a href="#basic-setup">⚙ Basic Scanner Setup</a><br />
+        <a href="#check-digit">🔢 Enable EAN-13 Check Digit</a>
+      </div>
 
-  <h5><b>Step 2.2</b></h5>
-  <p>Change <b>Broadcast-output settings </b> to below</p>
-  <p> <b>Broadcast action : com.edgewise.handheld.ACTION <br>
-    Result 1 extra : com.symbol.datawedge.data_string <br>
-  </b> </p>
-  <img src="./images/newland-5.png" class="img-fluid" style="max-width:50%;" alt="Responsive image">
+      <!-- Video -->
+      <div id="video" class="section-card">
+        <h4><b>Video Tutorial</b></h4>
+        <div class="embed-responsive embed-responsive-4by3">
+          <iframe
+            src="https://www.youtube.com/embed/IB9S2lC0Bio"
+            title="YouTube video player"
+            frameborder="0"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+      </div>
 
-</div>
-</body>
+      <!-- Basic Setup -->
+      <div id="basic-setup" class="section-card">
+        <h4><b>Step 1 — Open Scanner Settings</b></h4>
+
+        <h5 class="step-title"><b>For Newer Devices</b></h5>
+        <p><b>Step 1.1:</b> Search for <b>Quick Settings</b> app</p>
+        <p><b>Step 1.2:</b> Open the app → Select <b>Scan</b></p>
+
+        <h5 class="step-title"><b>For Older Devices</b></h5>
+        <p><b>Step 1.1:</b> Open <b>Settings</b> → <b>Extended Settings</b></p>
+        <img src="./images/newland-1.png" class="step-img" />
+
+        <p>
+          <b>Step 1.2:</b> Go to
+          <b>Settings → Extended Settings → Scan Settings</b>
+        </p>
+        <img src="./images/newland-2.png" class="step-img" />
+
+        <h4 class="step-title"><b>Step 2 — Configure Scanner</b></h4>
+
+        <p><b>Step 2.1:</b> Enable <b>Scan</b></p>
+        <img src="./images/newland-3.png" class="step-img" />
+
+        <p><b>Step 2.2:</b> Set <b>Output Mode</b> → <b>Output via API</b></p>
+        <img src="./images/newland-4.png" class="step-img" />
+
+        <p><b>Step 2.3:</b> Configure <b>Broadcast Output Settings</b></p>
+        <p>
+          <b>Broadcast Action:</b> com.edgewise.handheld.ACTION<br />
+          <b>Result Extra:</b> com.symbol.datawedge.data_string
+        </p>
+        <img src="./images/newland-5.png" class="step-img" />
+      </div>
+
+      <!-- NEW SECTION -->
+      <!-- Step 3 -->
+      <div id="check-digit" class="section-card">
+        <h4><b>Step 3 — Enable EAN-13 Check Digit (Important)</b></h4>
+
+        <div class="alert alert-warning">
+          If you are scanning <b>EAN-13 barcodes</b>, the check digit must be
+          enabled.
+        </div>
+
+        <p><b>Step 3.1:</b> Open the <b>Quick Settings</b> app</p>
+
+        <p><b>Step 3.2:</b> Select <b>Scan</b></p>
+        <img src="./images/nean1.jpeg" class="step-img" />
+
+        <p><b>Step 3.3:</b> Tap <b>Symbologies</b></p>
+        <img src="./images/nean2.jpeg" class="step-img" />
+
+        <p><b>Step 3.4:</b> Select <b>EAN-13</b></p>
+        <img src="./images/nean3.jpeg" class="step-img" />
+
+        <p><b>Step 3.5:</b> Enable <b>Transmit Check Digit</b></p>
+        <img src="./images/nean4.jpeg" class="step-img" />
+
+        <div class="alert alert-success">
+          ✅ This ensures the complete barcode value is transmitted to the app.
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
